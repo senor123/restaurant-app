@@ -26,8 +26,8 @@ const Home = () => {
     meals.length > 0
       ? meals[0].table_menu_list.filter(meal => meal.menu_category === category)
       : []
-  const handleCategory = category => {
-    setCategory(category)
+  const handleCategory = categoryItem => {
+    setCategory(categoryItem)
   }
   const updateCart = ({option, dish}) => {
     if (option === 'increase') {
