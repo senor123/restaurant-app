@@ -145,6 +145,9 @@ const Home = () => {
                         <p>Not Available</p>
                       </>
                     )}
+                    {dish.addonCat.length > 0 && (
+                      <p>Customizations Available</p>
+                    )}
                   </div>
                   <p className="dishcalories">{dish.dish_calories} calories</p>
                   <img src={dish.dish_image} alt={dish.dish_name} />
