@@ -91,9 +91,17 @@ const Home = () => {
         <>
           <nav className="header">
             <h1>{meals[0].restaurant_name}</h1>
-            <p>{getTotalQuantity()}</p>
+
+            <div>
+              <span className="cartquantity">{getTotalQuantity()}</span>
+              <img
+                src="https://res.cloudinary.com/dee8unwh3/image/upload/v1737253444/icons8-cart-50_g9jtqe.png"
+                alt="cart"
+                className="cartimage"
+              />
+            </div>
           </nav>
-          <ul>
+          <ul className="categorylist">
             {meals[0].table_menu_list.map(meal => (
               <button
                 type="button"
@@ -137,6 +145,9 @@ const Home = () => {
                         <p>Not Available</p>
                       </>
                     )}
+                    {dish.addonCat.length > 0 && (
+                      <p>Customizations Available</p>
+                    )}
                   </div>
                   <p className="dishcalories">{dish.dish_calories} calories</p>
                   <img src={dish.dish_image} alt={dish.dish_name} />
@@ -149,5 +160,4 @@ const Home = () => {
     </div>
   )
 }
-
 export default Home
