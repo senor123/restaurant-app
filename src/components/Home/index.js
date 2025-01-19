@@ -101,7 +101,7 @@ const Home = () => {
               />
             </div>
           </nav>
-          <ul>
+          <ul className="categorylist">
             {meals[0].table_menu_list.map(meal => (
               <button
                 type="button"
