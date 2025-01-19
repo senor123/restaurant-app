@@ -91,7 +91,15 @@ const Home = () => {
         <>
           <nav className="header">
             <h1>{meals[0].restaurant_name}</h1>
-            <p>{getTotalQuantity()}</p>
+
+            <div>
+              <span className="cartquantity">{getTotalQuantity()}</span>
+              <img
+                src="https://res.cloudinary.com/dee8unwh3/image/upload/v1737253444/icons8-cart-50_g9jtqe.png"
+                alt="cart"
+                className="cartimage"
+              />
+            </div>
           </nav>
           <ul>
             {meals[0].table_menu_list.map(meal => (

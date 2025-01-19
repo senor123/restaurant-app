@@ -16,6 +16,23 @@
     border-radius: 8px;
     margin-bottom: 10px;
   }
+  .cartquantity {
+    position: relative;
+    top: 20px;
+    right: -20px;
+    background-color: red;
+    color: black;
+    padding: 4px;
+    border-radius: 50%;
+  }
+
+  .cartimage {
+    position: relative;
+    top: 50px;
+    right: 25px;
+    height: 40px;
+    width: 40px;
+  }
   .mealtitle {
     font-size: 16px;
   }
